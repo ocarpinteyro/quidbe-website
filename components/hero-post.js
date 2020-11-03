@@ -1,37 +1,36 @@
 import Link from 'next/link'
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from '../components/cover-image'
 
 export default function HeroPost({
   title,
   coverImage,
-  date,
   excerpt,
-  author,
   slug,
 }) {
   return (
-    <section>
-      <div className="mb-8 md:mb-16">
-        <CoverImage title={title} slug={slug} url={coverImage.url} />
-      </div>
-      <div className="md:grid md:grid-cols-2 md:col-gap-16 lg:col-gap-8 mb-20 md:mb-28">
-        <div>
-          <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
+    <div className="blogs-4">
+      <div className="col-md-8 ml-auto mr-auto">
+        <div className="card card-plain card-blog">
+          <div className="card-header card-header-image">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
-              <a className="hover:underline">{title}</a>
+              <a>
+                <img className="img img-raised" src={coverImage.url} />
+              </a>
             </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <Date dateString={date} />
+          </div>
+          <div className="card-body">
+            <h6 className="card-category text-info">Fashion</h6>
+            <h3 className="card-title">
+            <Link as={`/posts/${slug}`} href="/posts/[slug]"><a>{title}</a></Link>
+            </h3>
+            <h5 className="card-description">
+              {excerpt}
+            </h5>
+            <Link as={`/posts/${slug}`} href="/posts/[slug]">
+              <a className="btn btn-primary btn-round">Leer más</a>
+            </Link>
           </div>
         </div>
-        <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          {author && <Avatar name={author.name} picture={author.picture} />}
-        </div>
       </div>
-    </section>
+    </div>
   )
 }

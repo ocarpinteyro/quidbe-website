@@ -669,6 +669,10 @@ mark,
   margin-bottom: 1rem;
   font-size: 1.25rem; }
 
+blockquote {
+  margin-bottom: 1rem;
+  font-size: 1.25rem; }
+
 .blockquote-footer {
   display: block;
   font-size: 80%;
@@ -11196,6 +11200,19 @@ h2.title {
     line-height: 1.42857143;
     color: #777; }
 
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eee; }
+  blockquote p {
+    font-size: 1.063rem;
+    font-style: italic; }
+  blockquote small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #777; }    
+
 .nav-tabs {
   border: 0;
   border-radius: 3px;
@@ -13519,7 +13536,7 @@ thead.thead-inverse th,
     min-height: 280px;
     padding-top: 40px;
     padding-bottom: 40px;
-    max-width: 440px;
+    max-width: 600px;
     margin: 0 auto; }
   .card-background .card-category, .back-background .card-category, .front-background .card-category,
   .card-background .card-description,
@@ -13529,6 +13546,8 @@ thead.thead-inverse th,
   .back-background small,
   .front-background small {
     color: rgba(255, 255, 255, 0.7) !important; }
+  .card-background .card-description-no-opacity {
+    color: rgba(255, 255, 255, 0.9) !important; }
   .card-background .card-title, .back-background .card-title, .front-background .card-title {
     color: #fff;
     margin-top: 10px; }
@@ -15509,6 +15528,9 @@ select.selectpicker {
     margin-bottom: 30px; }
   .blog-post .section-text .blockquote p {
     font-size: 1.5rem; }
+
+  .blog-post .section-text blockquote p {
+    font-size: 1.5rem; margin-bottom: 0}
 
 .blog-post .section-blog-info {
   padding-top: 30px;

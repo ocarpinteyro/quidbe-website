@@ -1,7 +1,5 @@
 import Link from 'next/link'
-import Avatar from '../components/avatar'
 import Date from '../components/date'
-import CoverImage from './cover-image'
 
 export default function PostPreview({
   title,
@@ -12,20 +10,35 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div>
-      <div className="mb-5">
-        <CoverImage title={title} slug={slug} url={coverImage.url} />
+    <div className="card card-plain card-blog">
+      <div className="row">
+        <div className="col-md-4">
+          <div className="card-header card-header-image">
+            <Link as={`/posts/${slug}`} href="/posts/[slug]">
+              <a>
+                <img className="img img-raised" src={coverImage.url} />
+              </a>
+            </Link>
+            <div className="colored-shadow" style={{
+              backgroundImage: `url(${coverImage.url})`, 
+              opacity: 1
+            }} />
+          </div>
+        </div>
+        <div className="col-md-8">
+          <h6 className="card-category text-info">Enterprise</h6>
+          <h3 className="card-title">
+          <Link as={`/posts/${slug}`} href="/posts/[slug]"><a>{title}</a></Link>
+          </h3>
+          <p className="card-description">
+          {excerpt}
+          <Link as={`/posts/${slug}`} href="/posts/[slug]"> <a>Leer más</a> </Link>
+          </p>
+          <p className="author">
+              por <b>{author.name}</b>, <Date dateString={date} />
+            </p>
+        </div>
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="hover:underline">{title}</a>
-        </Link>
-      </h3>
-      <div className="text-lg mb-4">
-        <Date dateString={date} />
-      </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      {author && <Avatar name={author.name} picture={author.picture} />}
     </div>
   )
 }
