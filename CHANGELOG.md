@@ -11,3 +11,7 @@
 * [ ] Agregar sección de Politica de Privacidad
 * [ ] Agregar Error 404
 * [X] Agregar TITLE TAB
+* [ ] Agregar `sitemap`
+* [ ] Agregar AdSense scripts
+* [ ] Agregar CircleCI
+* [ ] Agregar Banner de Instalación de App?

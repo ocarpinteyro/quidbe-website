@@ -8,7 +8,6 @@ export default function Layout({ preview, children }) {
       <Meta />
       <Header />
       <div className="main">
-      <div className="section-space"></div>
         <main>{children}</main>
         <div className="section-space"></div>
       </div>

@@ -29,6 +29,7 @@ export default function Post({ post, morePosts, preview }) {
               </title>
               <meta property="og:image" content={post.coverImage.url} />
             </Head>
+            <div className="section-space"></div>
             <PostHeader
               title={post.title}
               coverImage={post.coverImage}
