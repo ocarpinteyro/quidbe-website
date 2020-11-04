@@ -9,7 +9,7 @@ import SectionSeparator from '../../components/section-separator'
 import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 import StructuredDataPost from '../../components/structured-data-post'
-import { CMS_NAME } from '../../lib/constants'
+import { SITE_TITLE } from '../../lib/constants'
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -25,7 +25,7 @@ export default function Post({ post, morePosts, preview }) {
           <article>
             <Head>
               <title>
-                {post.title} | Next.js Blog Example with {CMS_NAME}
+                {post.title} | {post.tag.name} | {SITE_TITLE}
               </title>
               <meta property="og:image" content={post.coverImage.url} />
             </Head>

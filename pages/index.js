@@ -4,6 +4,7 @@ import HeroPost from '../components/hero-post'
 import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/api'
 import Head from 'next/head'
+import {SITE_TITLE_TAB} from '../lib/constants'
 
 export default function Index({ preview, allPosts }) {
   const heroPost = allPosts[0]
@@ -12,7 +13,7 @@ export default function Index({ preview, allPosts }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Quidbe</title>
+          <title>{SITE_TITLE_TAB}</title>
         </Head>
         <Container>
           {heroPost && (
