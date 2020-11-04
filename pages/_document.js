@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import StructuredDataSite from '../components/structured-data-site'
 
 export default class MyDocument extends Document {
   render() {
@@ -22,6 +23,7 @@ export default class MyDocument extends Document {
           <script src="/assets/js/plugins/jasny-bootstrap.min.js" type="text/javascript"></script>
           <script async defer src="https://buttons.github.io/buttons.js"></script>
           <script src="/assets/js/material-kit.js?v=2.2.0" type="text/javascript"></script>
+          <StructuredDataSite />
         </body>
       </Html>
     )
