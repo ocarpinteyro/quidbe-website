@@ -38,6 +38,7 @@ export default function Post({ post, morePosts, preview }) {
                 date={post.date}
                 author={post.author}
                 excerpt={post.excerpt}
+                tag={post.tag}
               />
               <PostBody content={post.content} />
             </article>

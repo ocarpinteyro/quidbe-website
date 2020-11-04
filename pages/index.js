@@ -23,6 +23,7 @@ export default function Index({ preview, allPosts }) {
               author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
+              tag={heroPost.tag}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
